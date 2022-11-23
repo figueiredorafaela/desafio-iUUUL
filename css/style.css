@@ -3,7 +3,9 @@
 
 :root {
   --primary-color: #06001e;
-  --secondary-color: #1c3fa8;
+  --secondary-color: #bbabda;
+  --third-color: #b5d6ff;
+  --fourth-color: #f7d1ba;
   --dark-color: #040a29;
   --light-color: #f4f4f4;
   --success-color: #5cb85c;
@@ -238,18 +240,6 @@ pre {
 
  
  /* Project */
- .project1 h2{
-  color: transparent;
-  background: conic-gradient(
-    #D9D7F1 12%, 
-    #BAABDA 12%, #BAABDA 33%, 
-    #c6f6bd 33%, #c6f6bd 55%, 
-    #FFCBCB 55%, #FFCBCB 70%, 
-    #B5DEFF 70%, #B5DEFF 87%, 
-    #F7D1BA 87%);
-  background-size: 20%;
-  background-clip: text;
- }
  
 /* About */
 .about-main h3 {
