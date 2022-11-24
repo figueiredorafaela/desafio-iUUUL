@@ -238,8 +238,13 @@ pre {
   overflow: visible;
  }
 
+ .tecnology .grid {
+  overflow: visible;
+  grid-template-columns: 50% auto;
+  gap: 10px;
+}
+
  
- /* Project */
  
 /* About */
 .about-main h3 {
