@@ -367,26 +367,13 @@ pre {
     #FFCBCB 55%, #FFCBCB 70%, 
     #B5DEFF 70%, #B5DEFF 87%, 
     #F7D1BA 87%);
-  background-size: 20%;
+  background-size: 33%;
   background-clip: text;
 }
 
 /* Footer */
 .footer .social a {
   margin: 0 10px;
-}
-
-.footer .social .gradient-text a{
-  color: transparent;
-  background: conic-gradient(
-    #D9D7F1 12%, 
-    #BAABDA 12%, #BAABDA 33%, 
-    #c6f6bd 33%, #c6f6bd 55%, 
-    #FFCBCB 55%, #FFCBCB 70%, 
-    #B5DEFF 70%, #B5DEFF 87%, 
-    #F7D1BA 87%);
-  background-size: 20%;
-  background-clip: text;  
 }
 
 .footer .gradient-text a{
@@ -398,7 +385,7 @@ pre {
     #FFCBCB 55%, #FFCBCB 70%, 
     #B5DEFF 70%, #B5DEFF 87%, 
     #F7D1BA 87%);
-  background-size: 33%;
+  background-size: 47%;
   background-clip: text;  
 }
 
@@ -463,7 +450,6 @@ pre {
 @media (max-width: 768px) {
   .grid,
   .home .grid, 
-  .home .home-text,
   .contact .grid,
   .about .grid,
   .portfolio .grid,
