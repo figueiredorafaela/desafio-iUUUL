@@ -452,6 +452,7 @@ pre {
   .home .grid, 
   .contact .grid,
   .about .grid,
+  .portfolio-main,
   .portfolio .grid,
   .about-main .grid,
   .about-main .grid {
@@ -499,8 +500,25 @@ pre {
     height: 110px;
   }
 
+  .col{
+    width: 400px;
+    flex-direction: column;
+  }
+
+  video{
+    width: 350px;
+  }
+
   .navbar .flex {
     flex-direction: column;
+  }
+
+  .home-text h1{
+    font-size: 70px;
+  }
+
+  .languages h2{
+    font-size: 30px;
   }
 
   .navbar ul {
