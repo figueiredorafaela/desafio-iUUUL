@@ -6,7 +6,7 @@
   --primary-color: #06001e;
   --secondary-color: #bbabda;
   --third-color: #b5d6ff;
-  --fourth-color: #f7d1ba;
+  --fourth-color: #c6f6bd;
   --dark-color: #040a29;
   --light-color: #f4f4f4;
   --success-color: #5cb85c;
@@ -143,13 +143,13 @@ pre {
     background-size: 50%;
     background-position: 0 0;
   }
-  20% {
+  50% {
     background-size: 55%;
     background-position: 0 1em;
   }
   100% {
     background-size: 325%;
-    background-position: -10em -4em;
+    background-position: -10em -3em;
   }
 }
 
@@ -158,7 +158,7 @@ pre {
     background-size: 325%;
     background-position: -10em -4em;
   }
-  20%{
+  50%{
     background-size: 55%;
     background-position: 0 1em;
   }
