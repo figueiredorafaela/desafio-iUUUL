@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 
+
 :root {
   --primary-color: #06001e;
   --secondary-color: #bbabda;
@@ -95,34 +96,106 @@ pre {
   justify-content: space-between;
 }
 
-/* Showcase */
-.showcase {
+/* Home */
+.home .grid{
+  grid-template-columns: 85% 0%;
+  gap: 30px;
+}
+
+.home .container{
+  overflow: visible;
+}
+
+.home-gradient-text{
+   color:transparent;
+   background: conic-gradient(
+    #D9D7F1 12%, 
+    #BAABDA 12%, #BAABDA 33%, 
+    #c6f6bd 33%, #c6f6bd 55%, 
+    #FFCBCB 55%, #FFCBCB 70%, 
+    #B5DEFF 70%, #B5DEFF 87%, 
+    #F7D1BA 87%);
+   background-size: 33%;
+   background-clip: text;
+}
+
+.home p{
+  color: #BDABBA;
+}
+
+.home h1{
+  font-size: 25vmin;
+  line-height: 20vmin;
+  padding-bottom: 40px;
+}
+
+.home-text{
+  margin-top: 100px;
+}
+
+.home h1:hover{
+  cursor: pointer;
+  animation: expand 0.5s ease forwards;
+}
+
+@keyframes expand {
+  0%{
+    background-size: 50%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 55%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 325%;
+    background-position: -10em -4em;
+  }
+}
+
+@keyframes expand-rev {
+  0%{
+    background-size: 325%;
+    background-position: -10em -4em;
+  }
+  20%{
+    background-size: 55%;
+    background-position: 0 1em;
+  }
+  100%{
+    background-size: 50%;
+    background-position: 0 0;
+  }
+}
+
+
+/* Contact */
+.contact {
   height: 400px;
   background-color: var(--primary-color);
   color: #fff;
   position: relative;
 }
 
-.showcase h1 {
-  font-size: 100px;
-  line-height: 20vmin;
+.contact h1{
+  font-size: 40px;
 }
 
-.showcase p {
+.contact p {
   margin: 20px 0;
 }
 
-.showcase .grid {
+.contact .grid {
   overflow: visible;
   grid-template-columns: 55% auto;
   gap: 30px;
 }
 
-.showcase-text {
+.contact-text {
   animation: slideInFromLeft 1s ease-in;
 }
 
-.showcase-form {
+.contact-form {
   position: relative;
   top: 60px;
   height: 350px;
@@ -133,12 +206,12 @@ pre {
   animation: slideInFromRight 1s ease-in;
 }
 
-.showcase-form .form-control {
+.contact-form .form-control {
   margin: 30px 0;
 }
 
-.showcase-form input[type='text'],
-.showcase-form input[type='email'] {
+.contact-form input[type='text'],
+.contact-form input[type='email'] {
   border: 0;
   border-bottom: 1px solid #b4becb;
   width: 100%;
@@ -146,7 +219,7 @@ pre {
   font-size: 16px;
 }
 
-.showcase-form input:focus {
+.contact-form input:focus {
   outline: none;
 }
 
@@ -234,7 +307,7 @@ pre {
 }
 
  /* Tecnology */
- .project .container {
+ .tecnology .container {
   overflow: visible;
  }
 
@@ -244,6 +317,27 @@ pre {
   gap: 10px;
 }
 
+.tecnology li{
+  list-style-type:disc;
+}
+
+.project .container{
+  overflow:visible;
+}
+
+.project .card a:hover{
+  font-weight: bold;
+  color: transparent;
+  background: conic-gradient(
+    #D9D7F1 12%, 
+    #BAABDA 12%, #BAABDA 33%, 
+    #c6f6bd 33%, #c6f6bd 55%, 
+    #FFCBCB 55%, #FFCBCB 70%, 
+    #B5DEFF 70%, #B5DEFF 87%, 
+    #F7D1BA 87%);
+  background-size: 20%;
+  background-clip: text;
+}
  
  
 /* About */
@@ -368,51 +462,47 @@ pre {
 /* Tablets and under */
 @media (max-width: 768px) {
   .grid,
-  .showcase .grid,
-  .stats .grid,
-  .cli .grid,
-  .cloud .grid,
-  .features-main .grid,
-  .docs-main .grid {
+  .home .grid, 
+  .home .home-text,
+  .contact .grid,
+  .about .grid,
+  .portfolio .grid,
+  .about-main .grid,
+  .about-main .grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
 
-  .showcase {
+  .contact {
     height: auto;
   }
 
-  .showcase-text {
+  .contact-text {
     text-align: center;
     margin-top: 40px;
     animation: slideInFromTop 1s ease-in;
   }
 
-  .showcase-form {
+  .contact-form {
     justify-self: center;
     margin: auto;
     animation: slideInFromBottom 1s ease-in;
   }
 
-  .cli .grid > *:first-child {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .features-head,
-  .features-sub-head,
-  .docs-head {
+  .portfolio-head,
+  .portfolio-sub-head,
+  .about-head {
     text-align: center;
   }
 
-  .features-head img,
-  .features-sub-head img,
-  .docs-head img {
+  .portfolio-head img,
+  .porfolio-sub-head img,
+  .about-head img {
     justify-self: center;
   }
 
-  .features-main .grid > *:first-child,
-  .features-main .grid > *:nth-child(2) {
+  .portfolio-main .grid > *:first-child,
+  .portfolio-main .grid > *:nth-child(2) {
     grid-column: 1;
   }
 }
@@ -432,7 +522,7 @@ pre {
     background-color: rgba(0, 0, 0, 0.1);
   }
   
-  .showcase-form {
+  .contact-form {
     width: 300px;
   }
   
