@@ -55,18 +55,22 @@
 
             <div class="contact-form card">
                 <h2 class="gradient-text">Mande uma mensagem</h2>
-                <form>
+                <form id="newMessage" action="" >
                     <div class="form-control">
-                        <input type="text" name="name" placeholder="Nome" required>
+                        <label for="nome">Nome</label>
+                        <input type="text" name="name" id="nome" required>
                     </div>
                     <div class="form-control">
-                        <input type="email" name="email" placeholder="E-mail" required>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
                     </div>
                     <div class="form-control">
-                        <input type="text" name="message" placeholder="Mensagem" required>
+                        <label for="mensagem">Mensagem</label>
+                        <input type="text" name="Mensagem" id="mensagem" required>
                     </div>
 
-                    <input type="submit" value="Enviar" class="btn btn-primary">
+                    <input type="submit" value="Enviar" class="btn btn-primary" id="guarda">
+                    <input type="submit" value="Deletar" class="btn btn-delete" id="deleta">
                     
                 </form>
             </div>
@@ -102,6 +106,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
