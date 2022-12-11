@@ -1,6 +1,5 @@
 const form = document.getElementById("newMessage")
-const lista = document.getElementById("lista")
-const contatos = []
+const contatos = JSON.parse(localStorage.getItem("contatos")) || []
 
 
 form.addEventListener("submit", (evento) => {
@@ -11,7 +10,7 @@ form.addEventListener("submit", (evento) => {
     const mensagem = evento.target.elements['mensagem']
     const deleta = document.getElementById("deleta")
     
-    guardaElemento(nome.value, email.value, mensagem.value)
+    guardaDados(nome.value, email.value, mensagem.value)
     
     deleta.addEventListener("click", function(){
         const resultado = window.confirm("Você tem certeza de que deseja DELETAR todas as mensagens?")
@@ -23,10 +22,11 @@ form.addEventListener("submit", (evento) => {
     email.value=""
     mensagem.value=""
  
+    pegaDados(contatos)
 })
 
 
-function guardaElemento(nome, email, mensagem) {
+function guardaDados(nome, email, mensagem) {
 
     const mensagemAtual ={
         "nome": nome,
@@ -38,4 +38,16 @@ function guardaElemento(nome, email, mensagem) {
 
     localStorage.setItem("contatos", JSON.stringify(contatos))
     
+}
+
+
+
+function pegaDados(contatos){
+
+    for (let i = 0; i < contatos.length; i++) {
+        const dados = contatos[i];
+        console.log(dados)
+
+   }
+   
 }
