@@ -12,17 +12,18 @@ form.addEventListener("submit", (evento) => {
     
     guardaDados(nome.value, email.value, mensagem.value)
     
-    deleta.addEventListener("click", function(){
-        const resultado = window.confirm("Você tem certeza de que deseja DELETAR todas as mensagens?")
-        if(resultado == true)
-            localStorage.clear()
-    })
-
     nome.value=""
     email.value=""
     mensagem.value=""
- 
+
     pegaDados(contatos)
+ 
+})
+
+deleta.addEventListener("click", function(){
+    const resultado = window.confirm("Você tem certeza de que deseja DELETAR todas as mensagens?")
+    if(resultado == true)
+        localStorage.clear()
 })
 
 
@@ -40,8 +41,6 @@ function guardaDados(nome, email, mensagem) {
     
 }
 
-
-
 function pegaDados(contatos){
 
     for (let i = 0; i < contatos.length; i++) {
@@ -49,5 +48,4 @@ function pegaDados(contatos){
         console.log(dados)
 
    }
-   
 }
