@@ -26,18 +26,12 @@
         </div>
     </div>
     <h2>Mensagens</h2>
-    <div>
-        <table>
-            <tbody>
-                <tr>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+
+    <div></div>
+
     <script>
         window.onload = () => {
-            const div = document.getElementsByTagName('td')[0]
+            const div = document.getElementsByTagName('div')[2]
             const obj = JSON.parse(localStorage.getItem("contatos"))
             obj.forEach(elem => {
                div.innerHTML += `\n<p><strong>Nome:</strong>${elem.nome};<strong>Email:</strong>${elem.email};<strong>Mensagem:</strong>${elem.mensagem}</p>`
