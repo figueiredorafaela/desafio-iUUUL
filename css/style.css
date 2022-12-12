@@ -325,6 +325,11 @@ pre {
   list-style-type:disc;
 }
 
+.tecnology .link{
+  text-decoration: underline;
+  color: var(--third-color)
+}
+
 .project .container{
   overflow:visible;
 }

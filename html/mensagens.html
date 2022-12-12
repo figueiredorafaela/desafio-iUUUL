@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens</title>
+
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+     <!-- Navbar -->
+     <div class="navbar">
+        <div class="container flex gradient-text">
+            <h1 class="logo gradient-text">Rafaela.</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a id="navigation" href="contato.html">Contato</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <h2>Mensagens</h2>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        window.onload = () => {
+            const div = document.getElementsByTagName('td')[0]
+            const obj = JSON.parse(localStorage.getItem("contatos"))
+            obj.forEach(elem => {
+               div.innerHTML += `\n<p><strong>Nome:</strong>${elem.nome};<strong>Email:</strong>${elem.email};<strong>Mensagem:</strong>${elem.mensagem}</p>`
+            });
+            console.log(obj)
+        }
+    </script>
+
+</body>
+</html>
+
+
