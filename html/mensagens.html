@@ -29,18 +29,19 @@
 
     <div></div>
 
-    <script>
-        window.onload = () => {
-            const div = document.getElementsByTagName('div')[2]
-            const obj = JSON.parse(localStorage.getItem("contatos"))
-            obj.forEach(elem => {
-               div.innerHTML += `\n<p><strong>Nome:</strong>${elem.nome};<strong>Email:</strong>${elem.email};<strong>Mensagem:</strong>${elem.mensagem}</p>`
-            });
-            console.log(obj)
-        }
-    </script>
 
 </body>
+
+<script>
+    window.onload = () => {
+        const div = document.getElementsByTagName('div')[2]
+        const obj = JSON.parse(localStorage.getItem("contatos"))
+        obj.forEach(elem => {
+           div.innerHTML += `\n<p><strong>Nome:</strong>${elem.nome};<strong>Email:</strong>${elem.email};<strong>Mensagem:</strong>${elem.mensagem}</p>`
+        });
+        console.log(obj)
+    }
+</script>
 </html>
 
 
